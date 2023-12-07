@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gd-auria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 15:58:26 by gd-auria          #+#    #+#             */
-/*   Updated: 2023/12/07 15:47:41 by gd-auria         ###   ########.fr       */
+/*   Created: 2023/12/07 15:37:43 by gd-auria          #+#    #+#             */
+/*   Updated: 2023/12/07 15:49:31 by gd-auria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int ft_strleng(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	int 	n:
+	
+	n = 0;
+	while (str[n])
+	n++;
+	return (n);
+}
+
+void	ft_putstr(char *str)
+{
+	write(1, str, ft_strleng(str));
 }
